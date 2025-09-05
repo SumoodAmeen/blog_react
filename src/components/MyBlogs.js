@@ -38,7 +38,7 @@ function MyBlogs() {
         const token = localStorage.getItem('token');
         if (!token) return navigate('/');
 
-        const res = await axios.get('http://127.0.0.1:8000/api/my/', {
+        const res = await axios.get('http://imsar.shop/api/my/', {
           headers: { Authorization: `Token ${token}` }
         });
 
@@ -71,12 +71,12 @@ function MyBlogs() {
       setCreating(true);
       const token = localStorage.getItem('token');
 
-      await axios.post('http://127.0.0.1:8000/api/create/', {
+      await axios.post('http://imsar.shop/api/create/', {
         title: createForm.title,
         content: createForm.content,
       }, { headers: { Authorization: `Token ${token}` } });
 
-      const res = await axios.get('http://127.0.0.1:8000/api/my/', {
+      const res = await axios.get('http://imsar.shop/api/my/', {
         headers: { Authorization: `Token ${token}` }
       });
       setMyPosts(res.data || []);

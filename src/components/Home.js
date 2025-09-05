@@ -26,7 +26,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get('http://127.0.0.1:8000/api/')
+      .get('http://imsar.shop/api/')
       .then((response) => setData(response.data))
       .catch((error) => console.log("Error fetching blogs"));
   }, []);

@@ -49,7 +49,7 @@ function AuthForm() {
 
     if (isLogin) {
       try {
-        const res = await axios.post("http://127.0.0.1:8000/api/login/", {
+        const res = await axios.post("http://imsar.shop/api/login/", {
           email,
           password
         });
@@ -83,7 +83,7 @@ function AuthForm() {
       }
 
       try {
-        const res = await axios.post("http://127.0.0.1:8000/api/register/", {
+        const res = await axios.post("http://imsar.shop/api/register/", {
           username,
           email,
           password,
